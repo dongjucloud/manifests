@@ -1,16 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- labels:
- app: k8s
- name: k8s
+  labels:
+    app: k8s
+  name: k8s
 spec:
- replicas: 3
- selector:
- matchLabels:
- app: k8s
- template:
- metadata:
- labels:
- app: k8s
- spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k8s
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s
+    spec:
+      containers:
+      - name: k8s
+        image: dockerdongju/jenkin_test:42
+        ports:
+          - containerPort: 8080
