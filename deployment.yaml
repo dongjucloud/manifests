@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: k8s
-        image: dockerdongju/jenkin_test:42
+        image: dockerdongju/jenkin_test:19
         ports:
           - containerPort: 8080
