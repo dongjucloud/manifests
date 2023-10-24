@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: k8s
-        image: dongjucloud/k8s:{jenkins build number}
+        image: dockerdongju/jenkin_test:55
         ports:
           - containerPort: 8080
